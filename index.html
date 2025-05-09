@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title color="#800800">THIRD EYE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Leonardo_Phoenix_10_A_dramatic_cinematic_keyframe_showcasing_a_2.jpg">
+    <link rel="stylesheet" href="Products.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="Contact.css">
+    <style> 
+        .basketball-animation {
+            position: fixed;
+            width: 25%;
+            height: 25%;
+            background: transparent;
+            display: none;
+            z-index: 100;
+            top: 50% !important;
+            transform: translateY(-50%);
+            animation: roll 8s ease-in-out;
+        }
+
+        @keyframes roll {
+            0% {
+                left: -100px;
+                transform: translateY(-50%) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                left: 100%;
+                transform: translateY(-50%) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .hero {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+        }
+
+        .hero.hidden {
+            opacity: 0;
+        }
+
+        #products {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: none;
+        }
+
+        #products.visible {
+            opacity: 1;
+            display: block;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+    </style> 
+</head>
+<body>
+    <div class="basketball-animation">
+        <img src="Screenshot 2025-01-19 at 07.42.06.png" alt="Basketball">
+    </div>
+    <div class="navbar">
+        <h2 color="rgb(194, 69, 69)">THIRD EYE</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <div class="search-container">
+                <input type="text" class="form-control" id="searchInput" placeholder="Search products...">
+                <button type="submit" class="btn btn-default" id="searchButton">
+                    <i class="fas fa-search"></i>Search
+                </button>
+            </div>
+        </nav>
+    </div>
+    <section class="hero">
+        <div class="video-background">
+            <iframe src="https://www.youtube.com/embed/L3374C3OyrY?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=L3374C3OyrY"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="hero-content">
+            <h1>Welcome to Third Eye Sports</h1>
+            <div class="cta-buttons">
+                <button class="cta-btn primary">Get Started</button>
+                <button class="cta-btn secondary">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="learn-more-modal" id="learnMoreModal">
+        <div class="learn-more-content">
+            <span class="close-learn-more">&times;</span>
+            <div class="learn-more-body">
+                <h2>Welcome to THIRD EYE Sports</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>Premium Quality</h3>
+                        <p>All our products are sourced from top manufacturers ensuring the highest quality.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-truck-fast"></i>
+                        <h3>Fast Delivery</h3>
+                        <p>Quick and reliable delivery service across the country.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>Our customer service team is always ready to help you.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure Payment</h3>
+                        <p>Safe and secure payment options for your convenience.</p>
+                    </div>
+                </div>
+                <div class="about-section">
+                    <h3>Our Story</h3>
+                    <p>THIRD EYE Sports has been serving sports enthusiasts since 2015. We're committed to providing the best sporting equipment and gear to help you achieve your athletic goals.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="number">5000+</span>
+                            <span class="label">Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">500+</span>
+                            <span class="label">Products</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">50+</span>
+                            <span class="label">Brands</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://www.freeiconspng.com/thumbs/football-png/adidas-football-png-9.png" alt="Football">
+                <h3>Football</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs5000</p>
+                <button class="add-to-cart-btn" data-id="1" data-name="Football" data-price="5000">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product">
+                <img  src="https://target.scene7.com/is/image/Target/GUEST_df979414-2d17-4ec8-a4a8-a87c56281391" alt="Basketball" id="Basketball">
+                <h3>Basketball</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs2000</p>
+                <button class="add-to-cart-btn" data-id="2" data-name="Basketball" data-price="2000">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://www.e-tennis.com/media/catalog/product/cache/9f6a0f2a2b1968473f9efdabe1103d96/w/r/wr066310-wilson_roland_garros_team_tennis_racquet_2021_-1-p.webp" alt="Tennis Racket">
+                <h3>Tennis Racket</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs7050</p>
+                <button class="add-to-cart-btn" data-id="3" data-name="Tennis Racket" data-price="7050">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://www.venum.com/cdn/shop/products/9_252Fd_252F2_252F7_252F9d277721a4670d9f1293247493ee8b5837b8c88f_BG_RAZOR_BLACK_GOLD_01.jpg?v=1699008553" alt="Boxing gloves">
+                <h3>Boxing gloves</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs5750</p>
+                <button class="add-to-cart-btn" data-id="4" data-name="Boxing gloves" data-price="5750">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div><div class="product">
+                <img src="https://www.houseofgolf.co.za/cdn/shop/collections/top-10-golf-club-brands-of-2020-1200x900.jpg?v=1669209958" alt="Golf Bat Set">
+                <h3>Golf Bat Set</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs40000</p>
+                <button class="add-to-cart-btn" data-id="5" data-name="Golf Bat Set" data-price="40000">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div><div class="product">
+                <img src="https://sportscenter.com.np/wp-content/uploads/2021/06/hockey-stick-balbro-1-600x600.jpg" alt="Hockey Stick">
+
+                <h3>Hockey Bat</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs7000</p>
+                <button class="add-to-cart-btn" data-id="6" data-name="Hockey Bat" data-price="7000">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://dac8r2vkxfv8c.cloudfront.net/images/products/a414-07-23-wilson-a2k-1810-12-75--baseball-glove--wbw1013811275-37099-1_s.jpg" alt="Baseball Gloves">
+                <h3>Baseball Gloves</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs1700</p>
+                <button class="add-to-cart-btn" data-id="7" data-name="Baseball Gloves" data-price="1170">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product">
+                <img  src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/97382638-d2d2-4cc7-9b23-7eb2460ae982/NIKE+BASKETBALL+8P+PRM+ENERGY.png" alt="Basketball" id="Basketball">
+                <h3>Basketball:White</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs7000</p>
+                <button class="add-to-cart-btn" data-id="2" data-name="Basketball" data-price="7000">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div><div class="product">
+                <img  src="https://i.ebayimg.com/images/g/PjUAAOSwowVk5Oiy/s-l1200.jpg" alt="Basketball" id="Basketball">
+                <h3>Basketball:Blue</h3>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>Price: Rs3500</p>
+                <button class="add-to-cart-btn" data-id="2" data-name="Basketball" data-price="3500">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product">
+                <img  src="https://sheshalifestyle.com/wp-content/uploads/2022/08/N.100.4138.812.07NIKE_ALL_COURT_2.0_8P_G_ANTETOKOUNMPO_F_PHSFP000-1.jpg" alt="Basketball" id="Basketball">
+                <h3>Basketball:Brown</h3>
+                <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>Price: Rs2700</p>
+                    <button class="add-to-cart-btn" data-id="2" data-name="Basketball" data-price="2700">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="https://thumblr.uniid.it/product/359114/7929706699ea.jpg?width=3840&format=webp&q=75" alt="Football">
+                    <h3>Football</h3>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>Price: Rs999</p>
+                    <button class="add-to-cart-btn" data-id="1" data-name="Football" data-price="999">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="https://ph-live-01.slatic.net/p/07368b6bc3ec43560695ed2fcb5f4a42.jpg" alt="Football">
+                    <h3>Football</h3>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>Price: Rs3500</p>
+                    <button class="add-to-cart-btn" data-id="1" data-name="Football" data-price="3500">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="https://contents.mediadecathlon.com/p2571113/k$3ac95ecf393dd1119853095237c0d036/machine-stitched-football-f100-size-4-white.jpg?format=auto&quality=40&f=800x800" alt="Football">
+                    <h3>Football</h3>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>Price: Rs2500</p>
+                    <button class="add-to-cart-btn" data-id="1" data-name="Football" data-price="2500">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="about" style="display: none;">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Leonardo_Phoenix_10_A_highly_stylized_cinematic_image_with_a_s_3.jpg" alt="Sports Store">
+            </div>
+            <div class="about-text">
+                <h3>Your Ultimate Sports Destination</h3>
+                <p>Welcome to THIRD EYE Sports - where passion meets performance! Established with a vision to provide premium sports equipment to athletes and enthusiasts alike, we've been serving our community since 2015.</p>
+                
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Premium Quality Products</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <span>Fast Nationwide Delivery</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-medal"></i>
+                        <span>Authentic Brands</span>
+                    </div>
+                </div>
+
+                <p>Our commitment to excellence extends beyond just selling sports equipment. We believe in fostering a community of sports lovers and providing expert guidance to help you make the right choices for your sporting needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="display: none;">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>contact@sportshub.com</p>
+                    <a href="mailto:contact@sportshub.com" class="contact-link">Send Email</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>+977 9808000000</p>
+                    <a href="tel:+9779808000000" class="contact-link">Call Now</a>
+                </div>
+                <div class="contact-card">
+                    
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Kathmandu, Nepal</p>
+                    <a href="https://maps.google.com" target="_blank" class="contact-link">View Map</a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+
+<div class="payment-modal" id="paymentModal">
+    <div class="payment-content">
+        <div class="payment-header">
+            <img src="https://rpcdn.ratopati.com/media/albums/eSewa-Company-Logo_FWu1YucLO0.jpg" alt="eSewa Logo">
+            <span class="close-modal">&times;</span>
+        </div>
+        <div class="payment-body">
+            <div class="amount-display">
+                <h3>Total Amount</h3>
+                <p class="total-amount">Rs. <span id="modalAmount">0</span></p>
+            </div>
+            <div class="payment-form">
+                <input type="text" placeholder="eSewa ID / Mobile Number" required>
+                <input type="password" placeholder="MPIN" required>
+                <button class="pay-button">Pay Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html> 
